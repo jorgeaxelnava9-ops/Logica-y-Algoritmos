@@ -12,6 +12,7 @@
         <h1>🌎 Planificador de Viajes</h1>
     </header>
 
+    <!--Esta sección es del formulario-->
     <section class="form-section">
         <form id="form-viaje">
 
@@ -34,13 +35,34 @@
             <option value="tren">tren</option>
             </select>
 
-            
-    
-        </form>
-    </section>
+            <input
+             type="number"
+             id="personas"
+             placeholder="Número de personas"
+             min="1"
+             required
+             >
+
+             <button type="submit">Planear viaje</button>
+
+             </form>
+             </section>
+
+        <!--Aquí va el resumen-->
+        <section id="resumen">
+            <h2>Resumen de viaje</h2>
+            <p>No hay información aún</p>
+        </section>
+
+        <!--Se agrega itinerario-->
+        <section id="itinerario">
+            <h2>Itinerario</h2>
+        </section>
+
 </main>
 
-    
+<!--Aquí va el enlace de JS principal-->
+<script type="module" src="./app.js"></script>
 
 </body>
 </html>
