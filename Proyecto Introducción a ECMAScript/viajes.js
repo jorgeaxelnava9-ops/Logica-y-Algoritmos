@@ -9,16 +9,16 @@ export const registrarDestino = (destino, fecha, transporte, personas) => {
       personas
     };
 
-    viajes.push(viajes);
+    viajes.push(viaje);
     };
 
     export const mostrarItinerario = (viajes) => {
-        return viajes.map(viaje =>
-          <div class="card">
-            <h3>${viaje.destino}</h3>
-            <p>📅 ${viaje.fecha}</p>
-            <p>🚍 ${viaje.transporte}</p>
-            <p>👥 ${viaje.personas} personas</p>
-          </div>
-        ).join("");
+          return viajes.map(viaje => `
+             <div class="card">
+               <h3>${viaje.destino}</h3>
+               <p>📅 ${viaje.fecha}</p>
+               <p>🚍 ${viaje.transporte}</p>
+               <p>👥 ${viaje.personas} personas</p>
+            </div>
+            `).join("");
     };

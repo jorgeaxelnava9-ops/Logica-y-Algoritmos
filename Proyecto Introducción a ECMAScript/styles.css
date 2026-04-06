@@ -8,7 +8,7 @@
 /*FUENTE Y FONDO*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg. #4facfe,#00f2fe);
+    background: linear-gradient(135deg, #4facfe,#00f2fe);
     min-height: 100vh;
     color: #333;
 }

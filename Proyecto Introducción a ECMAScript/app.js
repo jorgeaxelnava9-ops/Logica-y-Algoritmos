@@ -26,11 +26,9 @@ form.addEventListener("submit", (e) =>{
     registrarDestino(destino, fecha, transporte, personas);
 
     //Calcular costo
-    const costo = calcularCosto(transporte, personas);
+    const costo = calcularCosto(destino, transporte, personas);
 
-    //Obtener sugerencia
-    const sugerencia = sugerenciaViaje(destino);
-
+    
     // Mostrar resumen
     resumen.innerHTML = `
     <h2>Resumen del viaje</h2>
@@ -39,13 +37,13 @@ form.addEventListener("submit", (e) =>{
     <p>${sugerencia}</p>
     `;
     //Mostrar itinerario
-    itinerario.innerHTML =
-    <h2>Itinerario</h2>
-    ${mostrarItinerario(viajes)}
-    ;
+    itinerario.innerHTML = `
+       <h2>Itinerario</h2>
+       ${mostrarItinerario(viajes)}
+       `;
 
     //Limpiar formulario
-    form.requestFullscreen();
+      form.reset();
 });
 
 

@@ -4,13 +4,13 @@ const precios = {
     tren: 3000
 };
 
-export const calcularCosto = (transporte, personas) => {
-    let total = precios[transporte] * personas;
+export const calcularCosto = (destino, transporte, personas) => {
+    let total = precios[transporte] || 0;
 
-    //Descuento por grupo
     if (personas >= 4) {
         total *= 0.85;
     }
 
     return total;
+};
 };
