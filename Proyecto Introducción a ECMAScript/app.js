@@ -1,5 +1,5 @@
-import { viajes, registrarDestino, mostrarItinerario } from "./viajes";
-import { calcularCosto } from "./costos";
+import { viajes, registrarDestino, mostrarItinerario } from "./viajes.js";
+import { calcularCosto } from "./costos.js";
 
 //Elementos del DOM
 const form = document.getElementById("form-viaje");
@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) =>{
     const destino = destinoInput.value;
     const fecha = fechaInput.value;
     const transporte = transporteInput.value;
-    const personas = parseInt(personasInput.value);
+    const personas = parseInt(personasInput.value, 10);
 
     //guardar viaje
     registrarDestino(destino, fecha, transporte, personas);
@@ -31,11 +31,11 @@ form.addEventListener("submit", (e) =>{
     
     // Mostrar resumen
     resumen.innerHTML = `
-    <h2>Resumen del viaje</h2>
-    <p><strong>Destino:</strong> ${destino}</p>
-    <p><strong>Total:</strong> $${costo}</p>
-    <p>${sugerencia}</p>
-    `;
+<h2>Resumen del viaje</h2>
+<p><strong>Destino:</strong> ${destino}</p>
+<p><strong>Total:</strong> $${costo}</p>
+`;
+
     //Mostrar itinerario
     itinerario.innerHTML = `
        <h2>Itinerario</h2>

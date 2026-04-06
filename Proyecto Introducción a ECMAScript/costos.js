@@ -13,4 +13,3 @@ export const calcularCosto = (destino, transporte, personas) => {
 
     return total;
 };
-};
