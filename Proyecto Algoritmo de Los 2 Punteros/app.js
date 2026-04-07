@@ -1,55 +1,55 @@
 //Lista ordenada alfabéticamente
 const invitados = [
-  "Adrián"
-  "Alberto"
-  "Alejandra"
-  "Alejandro"
-  "Alicia"
-  "Andrea"
-  "Andrés"
-  "Antonio"
-  "Beatriz"
-  "Benjamín"
-  "Brenda"
-  "Carlos"
-  "Carolina"
-  "Cecilia"
-  "Claudia"
-  "Daniel"
-  "Daniela"
-  "David"
-  "Diego"
-  "Diana"
-  "Eduardo"
-  "Elena"
-  "Emilio"
-  "Enrique"
-  "Erika"
-  "Fernando"
-  "Francisco"
-  "Gabriela"
-  "Gabriel"
-  "Gerardo"
-  "Guadalupe"
-  "Héctor"
-  "Hugo"
-  "Isabel"
-  "Iván"
-  "Javier"
-  "Jorge"
-  "José"
-  "Juan"
-  "Julio"
-  "Karla"
-  "Laura"
-  "Luis"
-  "Manuel"
-  "María"
-  "Mario"
-  "Miguel"
-  "Natalia"
-  "Patricia"
-  "Raúl"
+  "Adrián",
+  "Alberto",
+  "Alejandra",
+  "Alejandro",
+  "Alicia",
+  "Andrea",
+  "Andrés",
+  "Antonio",
+  "Beatriz",
+  "Benjamín",
+  "Brenda",
+  "Carlos",
+  "Carolina",
+  "Cecilia",
+  "Claudia",
+  "Daniel",
+  "Daniela",
+  "David",
+  "Diego",
+  "Diana",
+  "Eduardo",
+  "Elena",
+  "Emilio",
+  "Enrique",
+  "Erika",
+  "Fernando",
+  "Francisco",
+  "Gabriela",
+  "Gabriel",
+  "Gerardo",
+  "Guadalupe",
+  "Héctor",
+  "Hugo",
+  "Isabel",
+  "Iván",
+  "Javier",
+  "Jorge",
+  "José",
+  "Juan",
+  "Julio",
+  "Karla",
+  "Laura",
+  "Luis",
+  "Manuel",
+  "María",
+  "Mario",
+  "Miguel",
+  "Natalia",
+  "Patricia",
+  "Raúl",
 ];
 
 const contenedor = document.getElementById("contenedor");
@@ -92,5 +92,27 @@ function encontrarPareja(lista) {
 //Evento botón
 document.getElementById("btnBuscar").addEventListener("click", () => {
 
-    const pareja
-})
+    const pareja = encontrarPareja(invitados);
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => card.classList.remove("Highlight"));
+
+    if (pareja) {
+        resultado.textContent = ✅${pareja[0]} y ${pareja[1]} pueden sentarse juntos`;
+
+//Resaltar en UI
+cards.forEach(card => {
+    if (card.textContent === pareja [0] || card.textContent === pareja[1]) {
+    card.classList.add("highlight");
+    }
+    });
+
+    console.log("Pareja encontrada:", pareja);
+
+
+    } else {
+        resultado.textContent = "❌ No hay parejas compatibles";
+    console.log("No se encontró pareja");
+    }
+
+});
