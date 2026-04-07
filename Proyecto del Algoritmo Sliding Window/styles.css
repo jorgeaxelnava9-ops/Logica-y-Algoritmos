@@ -1,0 +1,65 @@
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 80%;
+    height: 120px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #00c9ff;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #92fe9d;
+}
+
+#palabras {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.word {
+    background: white;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.word.highlight {
+    background: #f39c12;
+    color: white;
+    transform: scale(1.2);
+}
+
+#resultado {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
