@@ -70,3 +70,27 @@ function mostrarInvitados(lista){
 mostrarInvitados(invitados);
 
 //Algoritmo de dos punteros
+function encontrarPareja(lista) {
+    let i = 0;
+    let j = 1;
+
+    while (j <lista.length) {
+        const inicial1 = lista[i][0];
+        const inicial2 = lista[j][0];
+
+        if (inicial1 === inicial2) {
+            return [lista[i], lista[j]];
+        }
+
+        i++;
+        j++;
+    }
+
+    return null;
+}
+
+//Evento botón
+document.getElementById("btnBuscar").addEventListener("click", () => {
+
+    const pareja
+})
