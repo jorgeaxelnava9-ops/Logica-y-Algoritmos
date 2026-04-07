@@ -39,6 +39,30 @@ document.getElementById("btnFiltrar").addEventListener("click", () => {
     console.log("Filtrados (<100):", filtrados);
 
     //3. SORT ordenar por nombre
-})
+    const ordenados = filtrados.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    console.log("Ordenados:", ordenados);
+
+    //4. MAP solo nombres
+    const nombres = ordenados.map(p => p.nombre);
+    console.log("Nombres:", nombres);
+
+    //Mostrar en pantalla
+    mostrarProductos(ordenados);
+
+    const lista = document.getElementById("listaNombres");
+    lista.innerHTML = "";
+
+    nombres.forEach(nombre => {
+        const li = document.createElement("li");
+        li.textContent = nombre;
+        lista.appendChild(li);
+    });
+
+    // Reduce total de precios
+    const total = ordenados.reduce((acc, p) => acc + p.precio, 0);
+    console.log("Total precios:", total);
+
+    });
+
 
 
