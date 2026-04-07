@@ -18,11 +18,11 @@ function mostrarProductos(lista) {
         const card = document.createElement("div");
         card.classList.add("card");
 
-        card.innerHTML =
-        <h3>${producto.nombre}</h3>
-        <p>💲 ${producto.precio}</p>
-        <p>📦 ${producto.categoria}</p>
-        ;
+        card.innerHTML = `
+          <h3>${producto.nombre}</h3>
+          <p>💲 ${producto.precio}</p>
+          <p>📦 ${producto.categoria}</p>
+          `;
 
         contenedor.appendChild(card);
         });
