@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+
+.app {
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+.item {
+    background: white;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+
