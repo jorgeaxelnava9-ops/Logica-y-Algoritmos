@@ -19,7 +19,7 @@ const regalos = [
 ];
 
 const lista = document.getElementById("lista");
-const resultado = resultado.getElementById("resultado");
+const resultado = document.getElementById("resultado");
 
 //Mostrar lista 
 function mostrarLista() {
@@ -45,7 +45,7 @@ function buscarRegalo(lista, objetivo, index = 0) {
     }
 
     // CASO BASE 2: No encontrado
-    if (index >= lista.lenght) {
+    if (index >= lista.length) {
         return "❌ El regalo no está en la lista";
     }
 
@@ -56,9 +56,9 @@ function buscarRegalo(lista, objetivo, index = 0) {
 //Evento botón
 document.getElementById("btnBuscar").addEventListener("click", () => {
 
-    const valor = document.getElementById("inputRegalo").ariaValueMax;
+    const valor = document.getElementById("inputRegalo").value;
 
-    const mensaje = buscarRegalo(regalo, valor);
+    const mensaje = buscarRegalo(regalos, valor);
 
     resultado.textContent = mensaje;
     console.log(mensaje);
@@ -69,7 +69,7 @@ document.getElementById("btnBuscar").addEventListener("click", () => {
 
     items.forEach(item => {
         if (item.textContent === valor) {
-            items.classList.add("highlight");
+            item.classList.add("highlight");
         }
     });
 });
