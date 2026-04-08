@@ -1,0 +1,50 @@
+body {
+    font-family: monospace;
+    background: linear-gradient(135deg, #000428, #004e92);
+    color: #00ffcc;
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 250px;
+    margin-top: 10px;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #00ffcc;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#visual {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bloque {
+    padding: 10px;
+    background: black;
+    border: 1px solid #00ffcc;
+    border-radius: 10px;
+}
+
+.max {
+    background: #00ffcc;
+    color: black;
+    transform: scale(1.2);
+}
